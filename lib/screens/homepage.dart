@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color(0XFFEFEBE9),
 
       //screen body
-      body: Container(
+      body: SingleChildScrollView(
         child:Column(
           children: [
             Padding(
@@ -75,13 +75,13 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.w700,
                   fontSize: 36),),
 
-            const SizedBox(height: 12,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children:[
-                const SizedBox(
-                  height: 50,
-                  width: 250,
+            Padding(padding: EdgeInsets.all(16.0),
+             child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children:[
+                  const SizedBox(
+                    height: 50,
+                    width: 250,
                     child:TextField(
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.search, color: Colors.grey,),
@@ -91,29 +91,23 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.all(Radius.circular(10.0),)
                         ),
 
-
                       ),
                     ),
-                ),
-                const SizedBox(width: 10,),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                    child:Container(
-                      width: 70,
-                      color: Colors.white,
-                        child:FlatButton(onPressed: (){},
-                            child: const Icon(Icons.tune, size: 48, color: Colors.black,))
-                    )
-
-                )
-
-
-              ],
-
-              //adding cards in the screen
-
-
+                  ),
+                  const SizedBox(width: 10,),
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child:Container(
+                          width: 68,
+                          color: Colors.white,
+                          child:FlatButton(onPressed: (){},
+                              child: const Icon(Icons.tune, size: 48, color: Colors.black,))
+                      ),
+                  )
+                ],
+              ),
             ),
+
             //cards list
                 SizedBox(
                   height: 170,
@@ -131,13 +125,14 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10),
                           child:const HomeCards(
                               title: "Create Job Alert",
-                              background: Color(0xFF8D9075), icons: Icons.notifications,),
+                              background: Color(0xFFDCEDC8), icons: Icons.notifications,),
                         )
-                      ],
+                      ]
                   )
             ),
             const SizedBox(height: 4.0,),
-            const Text("Best of List", style: TextStyle(color: Colors.black,
+            const Text("Best of List",
+              style: TextStyle(color: Colors.black,
                 fontWeight: FontWeight.w500, fontSize: 24),),
 
             SizedBox(
@@ -146,17 +141,15 @@ class _HomePageState extends State<HomePage> {
                 child:Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child:const HomeCards(
+                      const HomeCards(
                         title: "Best Company to work",
-                        background: Color(0xFF86AFAE), icons: Icons.location_city,),
-                    ),
+                        background: Color(0xFFFBE9E7), icons: Icons.location_city,),
+
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child:const HomeCards(
                         title: "Best Job for you",
-                        background: Color(0xFF8D9075), icons: Icons.manage_search,),
+                        background: Color(0xFFE0F2F1), icons: Icons.manage_search,),
                     )
                   ],
                 )

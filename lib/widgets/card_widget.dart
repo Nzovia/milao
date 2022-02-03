@@ -53,11 +53,15 @@ class HomeCards extends StatelessWidget {
         child:Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
+      shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(20.0)),
 
         child:Container(
           height: 150,
           width: 150,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
+            color: background,
+          ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -65,7 +69,8 @@ class HomeCards extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
-                 backgroundColor: Colors.grey,
+                  radius: 24,
+                 backgroundColor: Color(0xFFB0BEC5),
                   child: Icon(
                     icons,
                     size: 36,
@@ -80,6 +85,7 @@ class HomeCards extends StatelessWidget {
                   alignment: FractionalOffset.bottomCenter,
                     child:Text(
                       title,
+                      textAlign: TextAlign.center,
                       style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
