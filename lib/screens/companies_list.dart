@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:milao/widgets/vertical_cards.dart';
+
 
 class CompaniesList extends StatefulWidget {
   const CompaniesList({Key? key}) : super(key: key);

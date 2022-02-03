@@ -77,8 +77,9 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 12,),
             Row(
-              children: const [
-                SizedBox(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children:[
+                const SizedBox(
                   height: 50,
                   width: 250,
                     child:TextField(
@@ -94,17 +95,17 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                 ),
-                SizedBox(width: 12,),
-                // IconButton(
-                //  //height: 50,
-                //  // onPressed: () {  },
-                //   icon:  Icon(Icons.tune,
-                //     color: Colors.black,
-                //     size: 48,
-                //   ), onPressed: () {  },
-                //
-                //
-                // ),
+                const SizedBox(width: 10,),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                    child:Container(
+                      width: 70,
+                      color: Colors.white,
+                        child:FlatButton(onPressed: (){},
+                            child: const Icon(Icons.tune, size: 48, color: Colors.black,))
+                    )
+
+                )
 
 
               ],
@@ -115,24 +116,51 @@ class _HomePageState extends State<HomePage> {
             ),
             //cards list
                 SizedBox(
-                  height: 300,
+                  height: 170,
                   width: MediaQuery.of(context).size.width,
                   child:Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        HomeCards(
-                            title: "Upload Your Resume", 
-                            background: Color(0xFFE0F2F1)),
-                        HomeCards(
-                            title: "Create Job Alert",
-                            background: Color(0xFFE0F2F1)),
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child:const HomeCards(
+                              title: "Upload Your Resume",
+                              background: Color(0xFF86AFAE), icons: Icons.upload,),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child:const HomeCards(
+                              title: "Create Job Alert",
+                              background: Color(0xFF8D9075), icons: Icons.notifications,),
+                        )
                       ],
-
-
                   )
-            
             ),
-            Text("Best of List", style: TextStyle(),)
+            const SizedBox(height: 4.0,),
+            const Text("Best of List", style: TextStyle(color: Colors.black,
+                fontWeight: FontWeight.w500, fontSize: 24),),
+
+            SizedBox(
+                height: 170,
+                width: MediaQuery.of(context).size.width,
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child:const HomeCards(
+                        title: "Best Company to work",
+                        background: Color(0xFF86AFAE), icons: Icons.location_city,),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child:const HomeCards(
+                        title: "Best Job for you",
+                        background: Color(0xFF8D9075), icons: Icons.manage_search,),
+                    )
+                  ],
+                )
+            ),
 
 
 

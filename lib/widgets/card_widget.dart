@@ -38,12 +38,12 @@ import 'package:flutter/material.dart';
 class HomeCards extends StatelessWidget {
 
   //card properties
-  //final Icon icons;
+  final IconData? icons;
   final String title;
   final Color background;
 
   const HomeCards({Key? key,
-    //required this.icons,
+    required this.icons,
     required this.title,
     required this.background}) : super(key: key);
 
@@ -52,72 +52,45 @@ class HomeCards extends StatelessWidget {
     return Container(
         child:Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Stack(children: [
-        // ClipRRect(
-        //   borderRadius: BorderRadius.circular(100),
-        //   child: Icon(
-        //     Icons.icons,
-        //     size: 48,
-        //     color: Colors.black,
-        //   ),
-        // ),
-        Container(
-          height: 280,
-          width: 210,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+      child: Card(
+
+        child:Container(
+          height: 150,
+          width: 150,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // FractionallySizedBox(
-                //   widthFactor:0.58,
-                //   child: FlatButton(
-                //       onPressed: () {},
-                //       color: Color(0x1AFFFFFF),
-                //       shape: RoundedRectangleBorder(
-                //           borderRadius: BorderRadius.circular(100.0),
-                //           side: const BorderSide(color: Color(0x1AFFFFFF))),
-                //       child: Row(
-                //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //         children: const <Widget>[
-                //           Align(
-                //             alignment: Alignment.centerLeft,
-                //             child: Icon(
-                //               Icons.location_on,
-                //               color: Colors.white,
-                //             ),
-                //           ),
-                //           Align(
-                //             alignment: Alignment.center,
-                //             child: Text(
-                //               "Malang",
-                //               style:
-                //               TextStyle(color: Colors.white, fontSize: 16),
-                //             ),
-                //           ),
-                //         ],
-                //       )),
-                // ),
+                CircleAvatar(
+                 backgroundColor: Colors.grey,
+                  child: Icon(
+                    icons,
+                    size: 36,
+                    color: Colors.black,
+                  ),
+                ),
 
                 const SizedBox(
                   height: 8,
                 ),
-                Center(
+                Align(
+                  alignment: FractionalOffset.bottomCenter,
                     child:Text(
                       title,
                       style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
                 ),
               ],
             ),
           ),
         ),
-      ]),
+      ),
     ),
     );
   }
