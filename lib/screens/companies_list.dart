@@ -137,8 +137,8 @@ class _CompaniesListState extends State<CompaniesList> {
               ],
             ),
             ListView(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
+                 scrollDirection: Axis.vertical,
+                 shrinkWrap: true,
                 children: companydata.map((e) {
                   return buildCard(
                     e['title'],

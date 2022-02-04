@@ -41,11 +41,14 @@ class HomeCards extends StatelessWidget {
   final IconData? icons;
   final String title;
   final Color background;
+  //final VoidCallback onPressed;
 
   const HomeCards({Key? key,
     required this.icons,
     required this.title,
-    required this.background}) : super(key: key);
+    required this.background,
+    //required this.onPressed
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +71,7 @@ class HomeCards extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+
                 CircleAvatar(
                   radius: 24,
                  backgroundColor: Color(0xFFB0BEC5),

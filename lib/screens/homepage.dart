@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:milao/widgets/card_widget.dart';
 
+import 'companies_list.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -98,10 +100,10 @@ class _HomePageState extends State<HomePage> {
                   ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child:Container(
-                          width: 68,
+                          width: 60,
                           color: Colors.white,
                           child:FlatButton(onPressed: (){},
-                              child: const Icon(Icons.tune, size: 48, color: Colors.black,))
+                              child: const Icon(Icons.tune, size: 40, color: Colors.black,))
                       ),
                   )
                 ],
@@ -141,15 +143,21 @@ class _HomePageState extends State<HomePage> {
                 child:Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                      const HomeCards(
+                    GestureDetector(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context)=> CompaniesList())),
+                      child:const HomeCards(
                         title: "Best Company to work",
                         background: Color(0xFFFBE9E7), icons: Icons.location_city,),
+                    ),
+
 
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child:const HomeCards(
                         title: "Best Job for you",
-                        background: Color(0xFFE0F2F1), icons: Icons.manage_search,),
+                        background: Color(0xFFE0F2F1),
+                        icons: Icons.manage_search,),
                     )
                   ],
                 )
