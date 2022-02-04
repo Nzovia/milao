@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:milao/screens/companies_list.dart';
+import 'package:milao/screens/company_info.dart';
 
 import 'screens/homepage.dart';
 

@@ -61,7 +61,7 @@ flutter:
   assets:
     - images/user.png
     - images/finder.png
-    - images/amazon.jpeg
+    - images/amazon.png
     - images/bankofamerica.png
     - images/comcast.png
     - images/dell.jpeg

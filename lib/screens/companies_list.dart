@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:milao/screens/company_info.dart';
 
 
 class CompaniesList extends StatefulWidget {
@@ -16,7 +17,7 @@ class _CompaniesListState extends State<CompaniesList> {
     List companydata = [
       {
         "title": "Amazon.com",
-        "imageUrl": "images/amazon.jpeg",
+        "imageUrl": "images/amazon.png",
         "rating": "4.8",
         "location": "New york, USA",
         "vacancy": "1 Vacancy"
@@ -51,7 +52,7 @@ class _CompaniesListState extends State<CompaniesList> {
       },
       {
         "title": "FedEx",
-        "imageUrl": "images/companies.jpg",
+        "imageUrl": "images/fedex.png",
         "rating": "2.6",
         "location": "New york, USA",
         "vacancy": "1 Vacancy"
@@ -139,6 +140,7 @@ class _CompaniesListState extends State<CompaniesList> {
             ListView(
                  scrollDirection: Axis.vertical,
                  shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 children: companydata.map((e) {
                   return buildCard(
                     e['title'],
@@ -160,7 +162,12 @@ class _CompaniesListState extends State<CompaniesList> {
         padding: const EdgeInsets.all(4.0),
         child: Container(
           height: 100,
-          child: Card(
+          child:InkWell(
+            onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context) =>CompanyInfo() ));
+            },
+
+            child: Card(
             elevation: 0.2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -183,20 +190,20 @@ class _CompaniesListState extends State<CompaniesList> {
                       const SizedBox(height: 4.0,),
                       RichText(
                           text: TextSpan(children: [
-                        const WidgetSpan(
-                            child: Icon(
-                          Icons.star_rate_outlined,
-                              size: 20,
-                          color: Colors.orangeAccent,
-                        )),
-                        TextSpan(
-                          text: rating,
-                          style: const TextStyle(
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 18),
-                        ),
-                      ])),
+                            const WidgetSpan(
+                                child: Icon(
+                                  Icons.star_rate_outlined,
+                                  size: 20,
+                                  color: Colors.orangeAccent,
+                                )),
+                            TextSpan(
+                              text: rating,
+                              style: const TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 18),
+                            ),
+                          ])),
                       const SizedBox(height: 4.0,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -246,6 +253,8 @@ class _CompaniesListState extends State<CompaniesList> {
               ],
             ),
           ),
+
+            ),
         ),
       );
 }
