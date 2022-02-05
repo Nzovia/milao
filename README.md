@@ -13,11 +13,9 @@ Link to the Dribble Design, and it's implementation
 - The following is the design implemented in flutter
 
 <p float ="left">
-<img src ="![screen1](https://user-images.githubusercontent.com/52350637/152659902-2916a2e0-4491-4ab4-b72b-fe9e5b6b28f2.jpg)" width = "200"/>
-<img src= !"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
-<img src =!"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
-
-
+<img src="https://user-images.githubusercontent.com/52350637/152659902-2916a2e0-4491-4ab4-b72b-fe9e5b6b28f2.jpg" width ="200" /> 
+<img src="https://user-images.githubusercontent.com/52350637/152659906-e55578b5-48c7-4519-9772-dfa25858276a.jpg" width ="200" />
+<img src = "https://user-images.githubusercontent.com/52350637/152659909-24c175cd-2318-44b1-87e2-e9c5a41ba1eb.jpg" width = "200" />
   </p>
 
 
