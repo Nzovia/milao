@@ -1,16 +1,24 @@
 # milao
 
-A new Flutter project.
+Milao Flutter project.
 
-## Getting Started
+This project is a a front end design for the milao app from Dribble
 
-This project is a starting point for a Flutter application.
+The app is about a Job serach app that will help users create online portiolio see companies and the vancancies they have:
 
-A few resources to get you started if this is your first Flutter project:
+Link to the Dribble Design, and it's implementation
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Job Search Mobile-Application](https://dribbble.com/shots/17353253-Job-Search-Platform-Mobile-App)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- The following is the design implemented in flutter
+<p float ="left">
+<img src=![]./home/nzovia/Desktop/images/milao/screen1.jpg width = "200"/>
+<img src= !"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
+<img src =!"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
+  </p>
+- 
+
+
+
+You can always refer for inspiration designs from Dribble, and implement them in the language of your choice
+
