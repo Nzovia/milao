@@ -13,7 +13,7 @@ Link to the Dribble Design, and it's implementation
 - The following is the design implemented in flutter
 
 <p float ="left">
-<img src="![](./home/nzovia/Desktop/images/milao/screen1.jpg?raw=true" width = "200"/>
+<img src ="![screen1](https://user-images.githubusercontent.com/52350637/152659902-2916a2e0-4491-4ab4-b72b-fe9e5b6b28f2.jpg)" width = "200"/>
 <img src= !"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
 <img src =!"/home/nzovia/Desktop/images/milao/screen2.jpg" width ="200"/>
 
