@@ -4,7 +4,7 @@ Milao Flutter project.
 
 This project is a a front end design for the milao app from Dribble
 
-The app is about a Job serach app that will help users create online portiolio see companies and the vancancies they have:
+The app is about a Job search app that will help users create online portifolio see companies and the vancancies they have:
 
 Link to the Dribble Design, and it's implementation
 
